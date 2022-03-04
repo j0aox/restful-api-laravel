@@ -2,6 +2,7 @@
 
 use App\Models\Produto;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\CidadeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,15 @@ Route::put('/produtos/{produtos}', [ProdutosController::class, 'update']);
 
 // deletando produtos por ID
 Route::delete('/produtos/{produtos}', [ProdutosController::class, 'destroy']);
+
+// Listar Cidades
+Route::get('/cidade', [CidadeController::class, 'index']);
+
+// adicionar cidade
+Route::post('/cidade', [CidadeController::class, 'store']);
+
+// atualizando produto por ID
+Route::put('/cidade/{cidade}', [CidadeController::class, 'update']);
+
+// deletando produtos por ID
+Route::delete('/cidade/{cidade}', [CidadeController::class, 'destroy']);
